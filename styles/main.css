@@ -1,773 +1,810 @@
-/*-------------------١--------------------------*/
-
-/*                  ملحوظات                     */
-
-/*
-ملحوظة عامة:لقد  تركت لكم تعليقات لتساعدك علي تنظيم الملف بالشكل المثالي
-تأكد من أن آخر جزء هو الجزء الحاوي لكل ما هو متعلق بشكل الصفحة على الهواتف والتابلت
-إذا كان لديك أي سؤال من فضلك إرسل لي الكود وشرح المشكلة علي البريد الالكتروني
-tony@barmej.com
-*/
-
-/*----------------------------------------------*/
-
-/*----------------------١-----------------------*/
-
-/*
-Fonts & Font-faces سنقوم بوضع جميع الخطوط التي سنحتاجها هنا
-ملحوظة: إسم الخط هو إما
-Avenir Next 
-أو إن لم تجده فيمكنك استعمال خط 
-Lato
-*/
-
-/*---------------------------------------------*/
-
+/**/
+/* fonts */
+/**/
 @font-face {
-    font-family: "Avenir Next";
-    src: url("../fonts/AvenirNext-Regular.woff2") format("woff2"), url("../fonts/AvenirNext-Regular.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Avenir Next";
+  src: url("../fonts/AvenirNext-Regular.woff2") format("woff2"),
+    url("../fonts/AvenirNext-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Avenir Next";
-    src: url("../fonts/AvenirNext-Bold.woff2") format("woff2"), url("../fonts/AvenirNext-Bold.woff") format("woff");
-    font-weight: bold;
-    font-style: normal;
+  font-family: "Avenir Next";
+  src: url("../fonts/AvenirNext-Bold.woff2") format("woff2"),
+    url("../fonts/AvenirNext-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Avenir Next Demi";
-    src: url("../fonts/AvenirNext-DemiBold.woff2") format("woff2"), url("../fonts/AvenirNext-DemiBold.woff") format("woff");
-    font-weight: 600;
-    font-style: normal;
+  font-family: "Avenir Next Demi";
+  src: url("../fonts/AvenirNext-DemiBold.woff2") format("woff2"),
+    url("../fonts/AvenirNext-DemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Avenir Next";
-    src: url("../fonts/AvenirNext-Medium.woff2") format("woff2"), url("../fonts/AvenirNext-Medium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
+  font-family: "Avenir Next";
+  src: url("../fonts/AvenirNext-Medium.woff2") format("woff2"),
+    url("../fonts/AvenirNext-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
 }
 
-/*----------------------٢-----------------------*/
-
-/*                  DEFAULTS                    */
-
-/*
-يجب عليك هنا وضع أي من الأنماط العامة الخاصة بوسوم مثل
-html, body, h1, h2, p 
-وهي الأنماط التي تنطبق على الموقع بشكل عام وكل صفحاته وليس على عنصر معين في صفحة معينة
-*/
-
-/*----------------------------------------------*/
+/**/
+/* reset */
+/**/
+html,
+body,
+iframe,
+header,
+footer,
+main,
+aside,
+nav,
+section,
+article,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+hr,
+blockquote,
+pre,
+a,
+address,
+del,
+em,
+i,
+strong,
+sub,
+sup,
+figure,
+figcaption,
+img,
+form,
+fieldset,
+legend,
+label,
+input,
+select,
+textarea,
+button,
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: none;
+  font-size: 100%;
+  font: inherit;
+}
+html,
+body,
+iframe,
+header,
+footer,
+main,
+aside,
+nav,
+section,
+article,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+hr,
+blockqoute,
+pre,
+figure,
+figcaption,
+form,
+fieldset,
+legend,
+label,
+input,
+select,
+textarea,
+button {
+  display: block;
+}
+html,
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+}
+dl,
+dt,
+dd,
+ul,
+ol,
+li {
+  list-style: none;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
 * {
-    box-sizing: border-box;
-}
-html, body {
-    background: #fff;
-    font: 400 16px/1 "Avenir Next", Helvetica, Arial, sans-serif;
-    color: #000000;
-}
-
-h1 {
-    font-size: 48px;
-    font-weight: bold;
-    line-height: 1.4;
-    text-transform: capitalize;
-}
-
-h2 {
-    font-size: 36px;
-    line-height: 1.4;
-    font-weight: 600;
-    text-transform: capitalize;
-}
-
-h3 {
-    font-size: 24px;
-    line-height: 1.4;
-    font-weight: 500;
-    text-transform: capitalize;
-}
-
-h4 {
-    font-size: 18px;
-    line-height: 1.4;
-    font-weight: 600;
-    text-transform: capitalize;
-}
-
-h5 {
-    font-size: 14px;
-    line-height: 1.4;
-    font-weight: 700;
-    text-transform: capitalize;
-}
-
-a {
-    text-decoration: none;
-    cursor: pointer;
-    color: inherit;
-}
-
-p {
-    font-size: 14px;
-    color: #000000;
-    line-height: 1.45;
+  box-sizing: border-box;
+  outline: none;
 }
 img {
-    width: 100%;
+  max-width: 100%;
 }
 
+/**/
+/* defaults */
+/**/
+html,
+body {
+  background: #fff;
+  font: 400 16px/1 "Avenir Next", Helvetica, Arial, sans-serif;
+  color: #000000;
+}
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.4;
+  text-transform: capitalize;
+}
+h2 {
+  font-size: 36px;
+  line-height: 1.4;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+h3 {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+h4 {
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+h5 {
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+p {
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.45;
+}
 @media screen and (max-width: 999px) {
-    /* tablet */
-    h1 {
-        font-size: 36px;
-    }
+  /* tablet */
+  h1 {
+    font-size: 36px;
+  }
 }
-
 @media screen and (max-width: 767px) {
-    /* mobile */
-    h2 {
-        font-size: 24px;
-    }
-    h3 {
-        font-size: 18px;
-    }
+  /* mobile */
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 18px;
+  }
 }
 
-/*----------------------٣-----------------------*/
-
-/*               HELPER CLASSES                 */
-
-/*
-يجب عليك هنا وضع أي من الأنماط الخاصة بال
-classes
-التي ستقوم بإعادة إستخدامها في أكثر من مكان خلال عملك على الموقع 
-على سبيل المثال: النمط الخاص بالزر الأزرق الذي يستعمله المصمم في كل الصفحات تقريباً
-*/
-
+/**/
+/* helpers */
+/**/
 .heading-paragraph {
-    color: #5f5f80;
-    font-size: 18px;
-    text-align: center;
-    line-height: 25px;
+  color: #5f5f80;
+  font-size: 18px;
+  text-align: center;
+  line-height: 25px;
 }
-
-.is-visible-mobile {
-    display: none;
+.show-mob {
+  display: none;
 }
-
 .button {
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: capitalize;
-    padding: 0 20px;
-    background: #000;
-    color: #fff;
-    line-height: 64px;
-    display: inline-block;
-    border-radius: 40px;
-    transition: all 0.2s;
-    border: 1px solid transparent;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 0 20px;
+  background: #000;
+  color: #fff;
+  line-height: 64px;
+  display: inline-block;
+  border-radius: 40px;
+  transition: all 0.2s;
+  border: 1px solid transparent;
 }
-
 .button:hover {
-    background: #494949;
+  background: #494949;
 }
-
-.button.is-primary {
-    background: #3040c4;
+.button.button--color__blue {
+  background: #3040c4;
 }
-
-.button.is-primary:hover {
-    background: #26329c;
+.button.button--color__blue:hover {
+  background: #26329c;
 }
-
-.button.is-secondary {
-    background: #ffffff;
-    color: #3040c4;
+.button.button--color__white {
+  background: #ffffff;
+  color: #3040c4;
 }
-
-.button.is-secondary:hover {
-    border-color: #fff;
-    background: transparent;
-    color: #fff;
+.button.button--color__white:hover {
+  border-color: #fff;
+  background: transparent;
+  color: #fff;
 }
-
-.button.is-outline {
-    background: transparent;
-    border-color: #fff;
+.button.button--color__transparent {
+  background: transparent;
+  border-color: #fff;
 }
-
-.button.is-outline:hover {
-    background-color: #fff;
-    color: #3040c4;
+.button.button--color__transparent:hover {
+  background-color: #fff;
+  color: #3040c4;
 }
 
 /*----------------------------------------------*/
-
-/*----------------------٤-----------------------*/
-
 /*                    LAYOUT                    */
-
-/*                البناء العام للصفحة           */
-
 /*----------------------------------------------*/
 
+/**/
+/* container */
+/**/
 .container {
-    max-width: 90%;
-    margin: 0 auto;
-    font-size: 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-size: 0;
 }
-
+.save-padding {
+  padding: 0 16px;
+}
 .page {
-    overflow: hidden;
+  overflow: hidden;
 }
-
-/*----------------------٥-----------------------*/
-
-/*                    HEADER                    */
 
 /*----------------------------------------------*/
+/*                    HEADER                    */
+/*----------------------------------------------*/
 
-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 29px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid #eef0fc;
+.page-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 29px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eef0fc;
 }
-
 .logo {
-    display: inline-block;
+  display: inline-block;
 }
 
 .burger div {
-    background: #2b292d;
-    height: 3px;
-    width: 20px;
+  background: #2b292d;
+  height: 3px;
+  width: 20px;
 }
-
-.burger div~div {
-    margin-top: 4px;
+.burger div ~ div {
+  margin-top: 4px;
 }
 
 .main-nav {
-    display: inline-block;
+  display: inline-block;
 }
-
 .main-nav li {
-    display: inline-block;
+  display: inline-block;
 }
-
-.main-nav li~li {
-    margin-left: 36px;
+.main-nav li ~ li {
+  margin-left: 36px;
 }
-
 .main-nav li a {
-    font-size: 18px;
-    color: #191b43;
-    font-weight: 500;
+  font-size: 18px;
+  color: #191b43;
+  font-weight: 500;
 }
-
 .main-nav li a:hover {
-    color: #3040c4;
+  color: #3040c4;
 }
-
-/*----------------------٦-----------------------*/
-
-/*                     HERO                     */
 
 /*----------------------------------------------*/
-
-.hero {
-    padding: 78px 0 98px;
-}
-
-.hero .container {
-    display: flex;
-    align-items: center;
-    padding: 0 0 0 12px;
-    justify-content: space-between;
-}
-
-.hero__desc {
-    /* padding-right: 30px; */
-    width: 400px;
-}
-
-.hero__desc h1 {
-    margin-bottom: 21px;
-}
-
-.hero__desc p {
-    font-size: 18px;
-    color: #000;
-    line-height: 1.7;
-    margin-bottom: 29px;
-    width: 370px;
-    max-width: 100%;
-}
-
-.hero__desc .button {
-    padding: 0 68px;
-}
-
-/*----------------------٧-----------------------*/
-
-/*              MEET YOUR MATCH                 */
-
+/*                    CONTENT                    */
 /*----------------------------------------------*/
 
-.meetYourMatch {
-    text-align: center;
-    position: relative;
+/**/
+/* Intro */
+/**/
+.intro-section {
+  padding: 78px 0 98px;
+}
+.intro-section .container {
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 12px;
+  max-width: 1292px;
+  justify-content: space-between;
+}
+.intro--headings {
+  /* padding-right: 30px; */
+  width: 400px;
+}
+.intro--headings h1 {
+  margin-bottom: 21px;
+}
+.intro--headings p {
+  font-size: 18px;
+  color: #000;
+  line-height: 1.7;
+  margin-bottom: 29px;
+  width: 370px;
+  max-width: 100%;
+}
+.intro--headings .button {
+  padding: 0 68px;
 }
 
-.meetYourMatchــcontent {
-    position: relative;
-    z-index: 1;
-    padding: 77px 0;
+/**/
+/* Meet Your Match */
+/**/
+.meet__your__match-section {
+  text-align: center;
+  position: relative;
+}
+.meet__your__match-section .container {
+  position: relative;
+}
+.meet__your_match--content {
+  position: relative;
+  z-index: 1;
+  padding: 77px 0;
+}
+.meet__your_match--background {
+  background: #eef0fc;
+  height: 512px;
+  border-radius: 18px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 1;
 }
 
-.meetYourMatchــbackground {
-    background: #eef0fc;
-    height: 512px;
-    border-radius: 18px;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    z-index: 1;
+/* Matching Form */
+.matching--form {
+  width: 525px;
+  margin: 28px auto 60px;
+  max-width: 100%;
+}
+.matching--form .switcher label {
+  display: inline-block;
+  vertical-align: middle;
+}
+.matching--form .switcher input {
+  display: none;
+}
+.matching--form .switcher input:checked ~ img {
+  border-color: #3040c4;
+}
+.matching--form .switcher img {
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+.matching--form .switcher span {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 16px;
+  font-size: 14px;
+  color: #9fa2b8;
+  text-transform: uppercase;
+}
+.matching--form .form-group {
+  position: relative;
+  margin-top: 28px;
+}
+.matching--form .form-group input {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #3040c4;
+  box-sizing: border-box;
+  border-radius: 41px;
+  height: 64px;
+  font-size: 18px;
+  color: rgba(48, 64, 196, 1);
+  background-image: url(../images/map-pin.png);
+  background-repeat: no-repeat;
+  background-position: 22px center;
+  padding-left: 54px;
+  text-transform: capitalize;
+}
+.matching--form .form-group input::placeholder {
+  color: rgba(48, 64, 196, 0.5);
+}
+.matching--form .form-group .button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 63px;
 }
 
-.meetYourMatchــform {
-    width: 525px;
-    margin: 28px auto 60px;
-    max-width: 100%;
+/* Pets Simples */
+.pets-simples {
+  font-size: 0;
+}
+.pets-simples .item {
+  padding: 0 28px;
+  display: inline-block;
+  vertical-align: top;
+}
+.pet--widget {
+  font-size: 0;
+  box-shadow: 0px 76px 172px rgba(205, 213, 228, 0.3);
+  display: inline-block;
+}
+.pet--widget .text {
+  padding: 16px 18px;
+  text-align: left;
+}
+.pet--widget .text p {
+  margin-top: 4px;
 }
 
-.meetYourMatchــform .switcher label {
-    display: inline-block;
-    vertical-align: middle;
+/**/
+/* How it works? */
+/**/
+.how__it__works {
+  text-align: center;
+  padding: 77px 0 200px;
+}
+.how__it__works-items {
+  margin-top: 55px;
+}
+.how__it__works-items .item {
+  display: inline-block;
+  vertical-align: middle;
+  width: 33%;
+  padding: 0 66px;
+}
+.how__it__works--widget .image {
+  margin-bottom: 30px;
+}
+.how__it__works--widget .text h3 {
+  margin-bottom: 8px;
+}
+.how__it__works--widget .text p {
+  color: #6a6c79;
+  font-size: 16px;
 }
 
-.meetYourMatchــform .switcher input {
-    display: none;
-}
-
-.meetYourMatchــform .switcher input:checked~img {
-    border-color: #3040c4;
-}
-
-.meetYourMatchــform .switcher img {
-    border: 1px solid transparent;
-    border-radius: 50%;
-}
-
-.meetYourMatchــform .switcher span {
-    display: inline-block;
-    vertical-align: middle;
-    padding: 0 16px;
-    font-size: 14px;
-    color: #9fa2b8;
-    text-transform: uppercase;
-}
-
-.meetYourMatchــform .form-group {
-    position: relative;
-    margin-top: 28px;
-}
-
-.meetYourMatchــform .form-group input {
-    width: 100%;
-    background: #ffffff;
-    border: 1px solid #3040c4;
-    box-sizing: border-box;
-    border-radius: 41px;
-    height: 64px;
-    font-size: 18px;
-    color: rgba(48, 64, 196, 1);
-    background-image: url(../images/map-pin.png);
-    background-repeat: no-repeat;
-    background-position: 22px center;
-    padding-left: 54px;
-    text-transform: capitalize;
-}
-
-.meetYourMatchــform .form-group input::placeholder {
-    color: rgba(48, 64, 196, 0.5);
-}
-
-.meetYourMatchــform .form-group .button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0 63px;
-}
-
-.widgets {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.is-searchResults .widget {
-    box-shadow: 0px 76px 172px rgba(205, 213, 228, 0.3);
-}
-
-.widget__desc {
-    padding: 16px 18px;
-    text-align: left;
-}
-
-.widget__desc p {
-    margin-top: 4px;
-}
-
-/*----------------------٨-----------------------*/
-
-/*               HOW IT WORKS                   */
-
-/*----------------------------------------------*/
-
-.howItWorks {
-    text-align: center;
-    padding: 77px 0 200px;
-}
-
-.howItWorks-items {
-    margin-top: 55px;
-}
-
-.howItWorks-items .item {
-    display: inline-block;
-    vertical-align: middle;
-    width: 33%;
-    padding: 0 66px;
-}
-
-.howItWorks--widget .image {
-    margin-bottom: 30px;
-}
-
-.howItWorks--widget .text h3 {
-    margin-bottom: 8px;
-}
-
-.howItWorks--widget .text p {
-    color: #6a6c79;
-    font-size: 16px;
-}
-
-/*----------------------٩-----------------------*/
-
-/*                 STORIES                      */
-
-/*----------------------------------------------*/
-
+/**/
+/* Stories */
+/**/
 .stories {
-    background: #f6f6f9;
-    padding: 95px 0 120px;
-    text-align: center;
+  background: #f6f6f9;
+  padding: 95px 0 120px;
+  text-align: center;
 }
-
 .stories .heading-paragraph {
-    width: 575px;
-    margin: 16px auto 48px;
-    max-width: 100%;
+  width: 575px;
+  margin: 16px auto 48px;
+  max-width: 100%;
 }
-
 .stories-items {
-    font-size: 0;
-    max-width: 1182px;
-    margin: 0 auto;
-    text-align: left;
+  font-size: 0;
+  max-width: 1182px;
+  margin: 0 auto;
+  text-align: left;
 }
-
 .stories-items .item {
-    display: inline-block;
-    vertical-align: top;
-    padding: 0 8px;
-    width: 33%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 8px;
+  width: 33%;
 }
-
 .story-widget .image img {
-    width: 100%;
+  width: 100%;
 }
-
 .story-widget .text {
-    padding: 18px 0;
-    text-align: left;
+  padding: 18px 0;
+  text-align: left;
 }
-
 .story-widget .text h3 {
-    margin-bottom: 7px;
+  margin-bottom: 7px;
 }
-
 .story-widget .text .link {
-    font-size: 14px;
-    color: #2329db;
-    font-weight: 600;
+  font-size: 14px;
+  color: #2329db;
+  font-weight: 600;
 }
-
 .story-widget .text .link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/*----------------------١٠----------------------*/
-
-/*       Actions: Change A Life, Adopt A Pet    */
-
-/*----------------------------------------------*/
-
+/**/
+/* Actions */
+/**/
 .actions {
-    background: #3040c4;
-    padding: 115px 0;
-    text-align: center;
-    color: #fff;
-    font-size: 0;
+  background: #3040c4;
+  padding: 115px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 0;
 }
-
 .actions h2 {
-    margin-bottom: 28px;
+  margin-bottom: 28px;
+}
+.actions .button--color__white {
+  padding: 0 68px;
+}
+.actions .button--color__transparent {
+  padding: 0 63px;
+}
+.actions .button + .button {
+  margin-left: 18px;
 }
 
-.actions .is-secondary {
-    padding: 0 68px;
-}
-
-.actions .is-outline {
-    padding: 0 63px;
-}
-
-.actions .button+.button {
-    margin-left: 18px;
-}
-
-/*---------------------١١-----------------------*/
-
+/*----------------------------------------------*/
 /*                    FOOTER                    */
-
 /*----------------------------------------------*/
 
-footer {
-    padding: 114px 0 120px;
+.page-footer {
+  padding: 114px 0 120px;
 }
-
+/**/
+/* Copyrights */
+/**/
 .copyrights {
-    display: inline-block;
-    vertical-align: top;
-    width: 33%;
+  display: inline-block;
+  vertical-align: top;
+  width: 33%;
 }
-
 .copyrights img {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
-
-.copyrights p~p {
-    margin-top: 10px;
+.copyrights p ~ p {
+  margin-top: 10px;
 }
-
 .copyrights a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-.footer-nav {
-    display: inline-block;
-    vertical-align: top;
-    width: 67%;
-    font-size: 0;
-    /* white-space: nowrap; */
+/**/
+/* tertiary nav */
+/**/
+.tertiary-nav {
+  display: inline-block;
+  vertical-align: top;
+  width: 67%;
+  font-size: 0;
+  /* white-space: nowrap; */
 }
-
-.footer-nav .item {
-    display: inline-block;
-    vertical-align: top;
-    white-space: nowrap;
-    padding-left: 45px;
+.tertiary-nav .item {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  padding-left: 45px;
 }
-
-.footer-nav h5 {
-    margin-bottom: 25px;
+.tertiary-nav h5 {
+  margin-bottom: 25px;
 }
-
-.footer-nav li~li {
-    margin-top: 16px;
+.tertiary-nav li ~ li {
+  margin-top: 16px;
 }
-
-.footer-nav a {
-    text-transform: capitalize;
-    font-size: 14px;
+.tertiary-nav a {
+  text-transform: capitalize;
+  font-size: 14px;
 }
-
-.footer-nav a:hover {
-    text-decoration: underline;
+.tertiary-nav a:hover {
+  text-decoration: underline;
 }
-
-/*----------------------١٢----------------------*/
-
-/*                    Responsive                */
-
-/*       كل ما هو متعلق بالهواتف والتابلت       */
 
 /*----------------------------------------------*/
-
+/*                    Responsive                */
+/*----------------------------------------------*/
 @media screen and (max-width: 1280px) {
-    .pets-simples {
-        max-width: 596px;
-        margin: 0 auto;
-    }
-    .pets-simples .item {
-        padding: 15px 34px;
-    }
+  .pets-simples {
+    max-width: 596px;
+    margin: 0 auto;
+  }
+  .pets-simples .item {
+    padding: 15px 34px;
+  }
 }
-
 @media screen and (max-width: 999px) {
-    footer {
-        padding: 120px 0 70px;
-    }
-    .heading-paragraph {
-        font-size: 16px;
-    }
-    .button {
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 56px;
-    }
-    .hero__desc {
-        width: 300px;
-    }
-    .hero__desc p {
-        font-size: 16px;
-        width: 300px;
-    }
-    .hero__desc .button {
-        padding: 0 52px;
-    }
-    .meetYourMatchــcontent h2 {
-        font-size: 24px;
-    }
-    .meetYourMatchــbackground {
-        height: 380px;
-    }
-    .meetYourMatchــform {
-        width: 500px;
-        margin-bottom: 55px;
-    }
-    .meetYourMatchــform .form-group input {
-        height: 58px;
-        background-size: 14px;
-        padding-left: 48px;
-        font-size: 16px;
-    }
-    .meetYourMatchــform .form-group .button {
-        padding: 0 54px;
-    }
-    .howItWorks {
-        padding: 50px 16px 175px;
-    }
-    .howItWorks .widget {
-        max-width: 290px;
-        margin: 0 auto;
-        display: block;
-        padding: 0;
-        width: 100%;
-    }
-    .howItWorks .widget {
-        margin-top: 70px;
-    }
-    .howItWorks .widget:first-child {
-        margin-top: 0;
-    }
-    .stories {
-        padding: 104px 16px 80px;
-    }
-    .actions {
-        padding: 60px 0;
-    }
-    .actions h2 {
-        font-size: 29px;
-    }
-    .actions .is-secondary {
-        padding: 0 50px 0 54px;
-    }
-    .actions .is-outline {
-        padding: 0 58px;
-    }
-    .actions .button+.button {
-        margin-left: 24px;
-    }
-    .copyrights {
-        width: 16%;
-    }
-    .footer-nav {
-        width: 84%;
-    }
+  .container {
+    max-width: 710px;
+  }
+  .page-footer {
+    padding: 120px 0 70px;
+  }
+  .heading-paragraph {
+    font-size: 16px;
+  }
+  .intro-section .container {
+    max-width: 722px;
+  }
+  .button {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 56px;
+  }
+  .intro--headings {
+    width: 300px;
+  }
+  .intro--headings p {
+    font-size: 16px;
+    width: 300px;
+  }
+  .intro--headings .button {
+    padding: 0 52px;
+  }
+  .meet__your_match--content {
+    padding: 52px 0;
+  }
+  .meet__your_match--content h2 {
+    font-size: 24px;
+  }
+  .meet__your_match--background {
+    height: 380px;
+  }
+  .matching--form {
+    width: 500px;
+    margin-bottom: 55px;
+  }
+  .matching--form .form-group input {
+    height: 58px;
+    background-size: 14px;
+    padding-left: 48px;
+    font-size: 16px;
+  }
+  .matching--form .form-group .button {
+    padding: 0 54px;
+  }
+  .how__it__works {
+    padding: 50px 16px 175px;
+  }
+  .how__it__works-items .item {
+    max-width: 290px;
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+    width: 100%;
+  }
+  .how__it__works-items .item ~ .item {
+    margin-top: 70px;
+  }
+  .stories {
+    padding: 104px 16px 80px;
+  }
+  .stories-items .item {
+    width: 50%;
+    padding-bottom: 40px;
+  }
+  .actions {
+    padding: 60px 0;
+  }
+  .actions h2 {
+    font-size: 29px;
+  }
+  .actions .button--color__white {
+    padding: 0 50px 0 54px;
+  }
+  .actions .button--color__transparent {
+    padding: 0 58px;
+  }
+  .actions .button + .button {
+    margin-left: 24px;
+  }
+  .copyrights {
+    width: 16%;
+  }
+  .tertiary-nav {
+    width: 84%;
+  }
 }
 
 @media screen and (max-width: 767px) {
-    .heading-paragraph {
-        font-size: 14px;
-    }
-    .is-visible-mobile {
-        display: block;
-    }
-    .main-nav {
-        display: none;
-    }
-    .actions h2 {
-        font-size: 24px;
-    }
-    footer {
-        padding: 60px 26px 0;
-    }
-    .copyrights {
-        width: 100%;
-        margin-bottom: 60px;
-    }
-    .footer-nav .item {
-        width: 50%;
-        padding-bottom: 50px;
-        padding-left: 0;
-    }
-    .hero {
-        padding: 53px 0 0;
-    }
-    .hero .container {
-        flex-direction: column;
-        padding: 0;
-    }
-    .hero__desc {
-        width: 100%;
-    }
-    .hero__desc .button {
-        padding: 0 57px;
-    }
-    .meetYourMatch {
-        padding: 0;
-    }
-    .meetYourMatchــbackground {
-        border-radius: 0 0 18px 18px;
-        height: 454px;
-    }
-    .howItWorks {
-        padding: 50px 16px 128px;
-    }
-    .widget {
-        margin-top: 40px;
-    }
-    .widget__desc {
-        font-size: 14px;
-        text-align: center;
-    }
-    .widget:first-child {
-        margin-top: 0;
-    }
-    .actions {
-        padding: 60px 0 56px;
-    }
+  .heading-paragraph {
+    font-size: 14px;
+  }
+  .show-mob {
+    display: block;
+  }
+  .main-nav {
+    display: none;
+  }
+  .actions h2 {
+    font-size: 24px;
+  }
+  .page-footer {
+    padding: 60px 26px 0;
+  }
+  .copyrights {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .tertiary-nav .item {
+    width: 50%;
+    padding-bottom: 50px;
+    padding-left: 0;
+  }
+  .intro-section {
+    padding: 53px 0 0;
+  }
+  .intro-section .container {
+    flex-direction: column;
+    padding: 0;
+  }
+  .intro--headings {
+    width: 100%;
+    padding: 0px 24px;
+  }
+  .intro--headings .button {
+    padding: 0 57px;
+  }
+  .meet__your_match--content {
+    padding: 52px 16px;
+  }
+  .meet__your__match-section {
+    padding: 0;
+  }
+  .meet__your_match--background {
+    border-radius: 0 0 18px 18px;
+    height: 454px;
+  }
+  .how__it__works {
+    padding: 50px 16px 128px;
+  }
+  .how__it__works--widget .text p {
+    font-size: 14px;
+  }
+  .how__it__works-items .item ~ .item {
+    margin-top: 40px;
+  }
+  .stories-items .item {
+    width: 100%;
+  }
+  .actions {
+    padding: 60px 0 56px;
+  }
 }
